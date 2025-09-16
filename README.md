@@ -28,6 +28,3 @@ It understands **English, Hindi, and multiple regional languages**, maintains co
 |Database (Logs)|SQLite / PostgreSQL|
 
 ---
-
-## 📂 Project Structure
-
