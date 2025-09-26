@@ -71,3 +71,18 @@ Yes, you can!
 To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
 Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+
+# RAG Chatbot
+
+A Retrieval-Augmented Generation (RAG) chatbot using MongoDB Atlas + OpenAI + React.
+
+## Setup
+
+### Backend
+```bash
+cd backend
+pip install -r requirements.txt
+cp .env.example .env
+# Add your keys in .env
+python app.py
+
