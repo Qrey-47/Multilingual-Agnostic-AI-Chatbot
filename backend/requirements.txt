@@ -1,0 +1,16 @@
+# Core
+numpy
+pymongo
+python-dotenv
+
+# LangChain + HuggingFace (first script)
+langchain-community
+transformers
+sentence-transformers
+ctransformers
+
+# LangChain + Gemini (second script)
+langchain-google-genai
+
+# (Optional) If using local models or HuggingFaceHub
+huggingface_hub
