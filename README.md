@@ -86,3 +86,11 @@ python RAG_final_gemini.py
 OR
 python RAG_final.py
 
+### Rasa Setup
+cd Chatbot
+python -m venv .venv
+.venv\Scripts\activate
+pip install -r requirements.txt
+rasa train
+rasa run actions
+rasa run --enable-api --cors "*"
