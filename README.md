@@ -74,7 +74,7 @@ Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/c
 
 # RAG Chatbot
 
-A Retrieval-Augmented Generation (RAG) chatbot using MongoDB Atlas + OpenAI + React.
+A Retrieval-Augmented Generation (RAG) chatbot using MongoDB Atlas + Gemini/Llama + React.
 
 ## Setup
 
