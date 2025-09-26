@@ -1,0 +1,35 @@
+version: "3.1"
+
+intents:
+  - greet
+  - ask_fees
+  - ask_followup_fees
+  - ask_scholarship
+  - ask_followup_scholarship
+  - ask_timetable
+  - ask_library
+  - ask_followup_library
+  - ask_events
+  - ask_contact
+  - ask_holidays
+  - ask_exam
+  - ask_followup_exam
+  - ask_hostel
+  - ask_followup_hostel
+  - out_of_scope
+
+slots:
+  current_topic:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: custom
+
+responses: {}
+
+actions:
+  - action_dynamic_response
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

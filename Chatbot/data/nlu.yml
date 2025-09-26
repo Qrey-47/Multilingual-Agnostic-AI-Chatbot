@@ -1,0 +1,248 @@
+version: "3.1"
+
+nlu:
+  # -------------------------
+  # Greetings
+  # -------------------------
+  - intent: greet
+    examples: |
+      - Hi
+      - Hello
+      - Hey
+      - Good morning
+      - Good evening
+      - Hi there
+      - Good afternoon
+      - नमस्ते
+      - शुभ प्रभात
+      - हैलो
+      - नमस्कार
+      - शुभ सकाळ
+      - हॅलो
+
+  # -------------------------
+  # Fees
+  # -------------------------
+  - intent: ask_fees
+    examples: |
+      - What is the last date for fees?
+      - Tell me fee deadlines
+      - Fees due date
+      - When should I pay fees?
+      - Fee payment deadline
+      - Last date to pay fees
+      - शुल्क की अंतिम तिथि क्या है?
+      - फीस जमा करने की तारीख बताओ
+      - फीस कब भरनी है?
+      - शुल्क की अंतिम तारीख?
+      - फीसाठी शेवटची तारीख काय आहे?
+      - शुल्क भरण्याची तारीख सांगा
+      - फी कधी भरायची?
+
+  - intent: ask_followup_fees
+    examples: |
+      - How can I pay fees?
+      - Can I pay in installments?
+      - Payment methods for fees
+      - Where to pay fees?
+      - Online payment option?
+      - What are the payment options?
+      - मैं फीस कैसे जमा कर सकता हूँ?
+      - किस्तों में भुगतान कैसे करें?
+      - फीस भरने के तरीके?
+      - ऑनलाइन भुगतान कैसे करें?
+      - मी फी कशी भरू शकतो?
+      - हप्त्यांमध्ये पैसे कसे भरायचे?
+      - फी भरण्याचे पर्याय काय आहेत?
+
+  # -------------------------
+  # Scholarship
+  # -------------------------
+  - intent: ask_scholarship
+    examples: |
+      - How can I apply for scholarship?
+      - Scholarship application process
+      - Where to get scholarship form?
+      - Tell me about scholarship
+      - Scholarship information
+      - छात्रवृत्ति के लिए कैसे आवेदन करें?
+      - छात्रवृत्ति फॉर्म कहाँ मिलेगा?
+      - स्कॉलरशिप की जानकारी
+      - शिष्यवृत्ती साठी कशी अर्ज करावी?
+      - फॉर्म कुठून मिळेल?
+      - शिष्यवृत्तीची माहिती
+
+  - intent: ask_followup_scholarship
+    examples: |
+      - What documents are required?
+      - Required documents for scholarship
+      - Documents needed for scholarship
+      - Scholarship document requirements
+      - किन दस्तावेजों की आवश्यकता है?
+      - छात्रवृत्ति के लिए कागजात
+      - कौन से दस्तावेज चाहिए?
+      - कोणती कागदपत्रे आवश्यक आहेत?
+      - शिष्यवृत्तीसाठी दस्तऐवज
+      - कोणती कागदपत्रे लागतात?
+
+  # -------------------------
+  # Timetable
+  # -------------------------
+  - intent: ask_timetable
+    examples: |
+      - What is the timetable?
+      - Show me class schedule
+      - Timetable information
+      - When are classes?
+      - Class timings
+      - समय सारिणी क्या है?
+      - क्लास का शेड्यूल बताओ
+      - कक्षा का समय क्या है?
+      - वेळापत्रक काय आहे?
+      - वर्गाचे वेळापत्रक दाखवा
+      - क्लासची वेळ काय आहे?
+
+  # -------------------------
+  # Library
+  # -------------------------
+  - intent: ask_library
+    examples: |
+      - Library timings
+      - When is library open?
+      - Library hours
+      - What time does library open?
+      - पुस्तकालय का समय
+      - पुस्तकालय कब खुलता है?
+      - लाइब्रेरी की टाइमिंग
+      - ग्रंथालय वेळ
+      - ग्रंथालय कधी उघडते?
+      - लायब्ररीची वेळ
+
+  - intent: ask_followup_library
+    examples: |
+      - How many books can I borrow?
+      - Late return fines?
+      - Book borrowing rules
+      - Library rules
+      - कितनी किताबें उधार ले सकता हूँ?
+      - देर से लौटाने पर जुर्माना कितना?
+      - पुस्तकालय के नियम क्या हैं?
+      - मी किती पुस्तके उधार घेऊ शकतो?
+      - उशिरा परत केल्यास दंड किती?
+      - ग्रंथालयाचे नियम काय आहेत?
+
+  # -------------------------
+  # Events
+  # -------------------------
+  - intent: ask_events
+    examples: |
+      - What events are happening?
+      - College events information
+      - Tell me about events
+      - Upcoming events
+      - कौन से कार्यक्रम हो रहे हैं?
+      - कॉलेज के इवेंट्स की जानकारी
+      - आगामी कार्यक्रम
+      - कोणते कार्यक्रम होत आहेत?
+      - महाविद्यालयातील कार्यक्रमांची माहिती
+      - येणारे कार्यक्रम
+
+  # -------------------------
+  # Contact
+  # -------------------------
+  - intent: ask_contact
+    examples: |
+      - Contact information
+      - How can I contact admin?
+      - Phone number of college
+      - Contact details
+      - संपर्क जानकारी
+      - एडमिन से कैसे संपर्क करें?
+      - कॉलेज का फोन नंबर
+      - संपर्क माहिती
+      - प्रशासनाशी कसा संपर्क करावा?
+      - महाविद्यालयाचा फोन नंबर
+
+  # -------------------------
+  # Holidays
+  # -------------------------
+  - intent: ask_holidays
+    examples: |
+      - When are holidays?
+      - Holiday information
+      - Semester break dates
+      - When does college close?
+      - छुट्टियां कब हैं?
+      - अवकाश की जानकारी
+      - सेमेस्टर ब्रेक कब है?
+      - सुट्टी कधी आहे?
+      - सुट्टीची माहिती
+      - सेमिस्टर ब्रेक कधी आहे?
+
+  # -------------------------
+  # Exams
+  # -------------------------
+  - intent: ask_exam
+    examples: |
+      - Exam dates
+      - IA and semester exams
+      - When are exams?
+      - Examination schedule
+      - परीक्षा की तिथियां
+      - सेमेस्टर परीक्षा
+      - परीक्षा कब है?
+      - परीक्षा तारखा
+      - सेमिस्टर परीक्षा
+      - परीक्षा कधी आहे?
+
+  - intent: ask_followup_exam
+    examples: |
+      - Are dates fixed?
+      - Can dates change?
+      - Exam date confirmation
+      - Are these dates final?
+      - क्या तिथियां स्थिर हैं?
+      - क्या डेट्स बदल सकती हैं?
+      - तारखा निश्चित आहेत का?
+      - तारखा बदलू शकतात का?
+
+  # -------------------------
+  # Hostel
+  # -------------------------
+  - intent: ask_hostel
+    examples: |
+      - Hostel information
+      - Hostel timings
+      - Tell me about hostel
+      - Hostel rules
+      - हॉस्टल की जानकारी
+      - हॉस्टल का समय
+      - वसतिगृह के बारे में बताएं
+      - हॉस्टल माहिती
+      - वसतिगृहाची वेळ
+      - हॉस्टल बद्दल सांगा
+
+  - intent: ask_followup_hostel
+    examples: |
+      - Where is hostel located?
+      - How far is hostel from college?
+      - Hostel location details
+      - हॉस्टल कहाँ स्थित है?
+      - हॉस्टल कॉलेज से कितनी दूर है?
+      - वसतिगृह कुठे आहे?
+      - हॉस्टल महाविद्यालयापासून किती दूर आहे?
+
+  # -------------------------
+  # Out of Scope
+  # -------------------------
+  - intent: out_of_scope
+    examples: |
+      - What is the weather?
+      - Tell me a joke
+      - Random chat
+      - How are you?
+      - What's your name?
+      - Can you dance?
+      - Tell me a story
+      - What's 2+2?
+      - Who is the president?

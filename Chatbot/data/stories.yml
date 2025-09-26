@@ -1,0 +1,175 @@
+version: "3.1"
+
+stories:
+
+# -------------------------
+# Basic Interactions
+# -------------------------
+- story: greet path
+  steps:
+    - intent: greet
+    - action: action_dynamic_response
+
+# -------------------------
+# Fees Queries + Follow-ups
+# -------------------------
+- story: fees path
+  steps:
+    - intent: ask_fees
+    - action: action_dynamic_response
+    - slot_was_set:
+        - current_topic: "fees"
+
+- story: fees followup path
+  steps:
+    - intent: ask_fees
+    - action: action_dynamic_response
+    - slot_was_set:
+        - current_topic: "fees"
+    - intent: ask_followup_fees
+    - action: action_dynamic_response
+
+# -------------------------
+# Scholarship Queries + Follow-ups
+# -------------------------
+- story: scholarship path
+  steps:
+    - intent: ask_scholarship
+    - action: action_dynamic_response
+    - slot_was_set:
+        - current_topic: "scholarship"
+
+- story: scholarship followup path
+  steps:
+    - intent: ask_scholarship
+    - action: action_dynamic_response
+    - slot_was_set:
+        - current_topic: "scholarship"
+    - intent: ask_followup_scholarship
+    - action: action_dynamic_response
+
+# -------------------------
+# Timetable Queries
+# -------------------------
+- story: timetable path
+  steps:
+    - intent: ask_timetable
+    - action: action_dynamic_response
+    - slot_was_set:
+        - current_topic: "timetable"
+
+# -------------------------
+# Library Queries + Follow-ups
+# -------------------------
+- story: library path
+  steps:
+    - intent: ask_library
+    - action: action_dynamic_response
+    - slot_was_set:
+        - current_topic: "library"
+
+- story: library followup path
+  steps:
+    - intent: ask_library
+    - action: action_dynamic_response
+    - slot_was_set:
+        - current_topic: "library"
+    - intent: ask_followup_library
+    - action: action_dynamic_response
+
+# -------------------------
+# Events Queries
+# -------------------------
+- story: events path
+  steps:
+    - intent: ask_events
+    - action: action_dynamic_response
+    - slot_was_set:
+        - current_topic: "events"
+
+# -------------------------
+# Contact Queries
+# -------------------------
+- story: contact path
+  steps:
+    - intent: ask_contact
+    - action: action_dynamic_response
+    - slot_was_set:
+        - current_topic: "contact"
+
+# -------------------------
+# Holidays Queries
+# -------------------------
+- story: holidays path
+  steps:
+    - intent: ask_holidays
+    - action: action_dynamic_response
+    - slot_was_set:
+        - current_topic: "holidays"
+
+# -------------------------
+# Exam Queries + Follow-ups
+# -------------------------
+- story: exam path
+  steps:
+    - intent: ask_exam
+    - action: action_dynamic_response
+    - slot_was_set:
+        - current_topic: "exam"
+
+- story: exam followup path
+  steps:
+    - intent: ask_exam
+    - action: action_dynamic_response
+    - slot_was_set:
+        - current_topic: "exam"
+    - intent: ask_followup_exam
+    - action: action_dynamic_response
+
+# -------------------------
+# Hostel Queries + Follow-ups
+# -------------------------
+- story: hostel path
+  steps:
+    - intent: ask_hostel
+    - action: action_dynamic_response
+    - slot_was_set:
+        - current_topic: "hostel"
+
+- story: hostel followup path
+  steps:
+    - intent: ask_hostel
+    - action: action_dynamic_response
+    - slot_was_set:
+        - current_topic: "hostel"
+    - intent: ask_followup_hostel
+    - action: action_dynamic_response
+
+# -------------------------
+# Mixed Conversation Flows
+# -------------------------
+- story: greet then ask fees
+  steps:
+    - intent: greet
+    - action: action_dynamic_response
+    - intent: ask_fees
+    - action: action_dynamic_response
+    - slot_was_set:
+        - current_topic: "fees"
+
+- story: greet then ask scholarship
+  steps:
+    - intent: greet
+    - action: action_dynamic_response
+    - intent: ask_scholarship
+    - action: action_dynamic_response
+    - slot_was_set:
+        - current_topic: "scholarship"
+
+# -------------------------
+# Out of Scope
+# -------------------------
+- story: out of scope path
+  steps:
+    - intent: out_of_scope
+    - action: action_dynamic_response

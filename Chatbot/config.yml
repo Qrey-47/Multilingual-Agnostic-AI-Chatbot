@@ -1,0 +1,26 @@
+# Lightweight multilingual config without transformers
+language: "hi"   # Hindi as base, but works for en/hi/mr
+
+pipeline:
+- name: WhitespaceTokenizer
+- name: RegexFeaturizer
+- name: LexicalSyntacticFeaturizer
+- name: CountVectorsFeaturizer     # word-level features
+- name: CountVectorsFeaturizer     # character n-grams (good for Indian languages)
+  analyzer: char_wb
+  min_ngram: 1
+  max_ngram: 4
+- name: DIETClassifier
+  epochs: 100
+  constrain_similarities: true
+- name: EntitySynonymMapper
+- name: FallbackClassifier
+  threshold: 0.7
+
+policies:
+- name: MemoizationPolicy
+- name: RulePolicy
+- name: TEDPolicy
+  max_history: 5
+  epochs: 100
+assistant_id: 20250925-204649-minimum-relationship
