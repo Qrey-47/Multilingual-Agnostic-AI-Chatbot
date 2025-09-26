@@ -10,7 +10,12 @@ from langchain_community.llms import CTransformers  # Local LLaMA via ctransform
 # ------------------------
 # 1️⃣ Setup MongoDB
 # ------------------------
-MONGO_URI = "mongodb+srv://adityaS:ADIScollege@collegecluster.iauhe6t.mongodb.net/?retryWrites=true&w=majority&appName=CollegeCluster"
+MONGO_URI = os.getenv("MONGO_URI")
+assert MONGO_URI, "Set the MONGO_URI environment variable in your .env file"
+
+GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
+assert GOOGLE_API_KEY, "Set the GOOGLE_API_KEY environment variable in your .env file"
+
 mongo_client = MongoClient(MONGO_URI)
 db = mongo_client["edumate"]
 collection = db["notices"]
@@ -113,3 +118,4 @@ if __name__ == "__main__":
     # Ask a question
     answer = answer_query("When are the semester exams?")
     print("Answer:", answer)
+
