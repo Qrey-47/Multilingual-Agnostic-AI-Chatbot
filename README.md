@@ -82,7 +82,7 @@ A Retrieval-Augmented Generation (RAG) chatbot using MongoDB Atlas + OpenAI + Re
 ```bash
 cd backend
 pip install -r requirements.txt
-cp .env.example .env
-# Add your keys in .env
-python app.py
+python RAG_final_gemini.py
+OR
+python RAG_final.py
 
